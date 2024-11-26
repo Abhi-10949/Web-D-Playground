@@ -1,0 +1,16 @@
+html{
+
+    background-color: antiquewhite;
+}
+h1{
+    color: whitesmoke;
+    border-style:solid;
+    border-color: green;
+    background-color: darkseagreen;
+}
+h2{
+    color: #FAF8F1;
+    border-style: solid;
+    border-color: gray;
+    background-color: #C58940;
+}

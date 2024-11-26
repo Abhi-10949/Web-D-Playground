@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Own Portfolio</title>
+    <style>
+        @media (min-width:300px) and (max-width:800px){
+            .tittle{
+                color: blueviolet;
+            }
+        }
+        body{
+            background-color: blueviolet;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+            margin: 0%;
+        }
+
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1000px;
+            padding: 20px;
+        }
+
+        .logo{
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav{
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a{
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            color: red;
+        }
+
+        .hero{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-top: auto;
+        }
+
+        .text{
+            text-align: left;
+        }
+
+        .description{
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .button{
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .lio{
+            color: red;
+        }
+
+        #span{
+            background-color: white;
+            color: black;
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        #span:hover{
+            background-color: brown;
+        }
+        body{
+            background-image: url(./Images/background.jpg);
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            Portfo<span class="lio">lio.</span>
+        </div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button class="button">Log In</button>
+            <button class="button">Register</button>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="text">
+            <h1 class="tittle">Hello,</h1>
+            <h1 class="tittle">It's Me CoderBoy</h1>
+            <p class="description">I'm a Web Developer & Design. I will make your projects beautiful and atteractive. You can find me on GitHub.</p>
+            <button id="span"> <span>Hire Me</span></button>
+        </div>
+        <p style="background-image: url(./Images/background.jpg);">
+    </div>
+</body>
+</html>

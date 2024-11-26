@@ -1,0 +1,29 @@
+/* Write your code here: */
+h1,h2{   /*gorup selector*/
+    background-color: blueviolet;
+}
+.box>p{  /*child selector*/
+    color: firebrick;
+}
+
+.box li{   /*desendent selector*/   
+    background-color: green;
+}
+
+li.done{   /*changing slector*/
+    color: yellow;
+}
+
+ul p.done{  
+    font-size: 0.5rem;
+}
+
+#outer_p{
+    background-color: brown;
+}
+body{
+    background-color: cyan;
+}
+#Abhi{
+    margin: 100px;
+}
