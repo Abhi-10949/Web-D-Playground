@@ -13,5 +13,7 @@ button{
 }
 
 h2{
-    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
+    color: #ff00ff;
+    background-color: #000000;
 }
