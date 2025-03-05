@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+    border: solid;
+    text-decoration: red underline;
+    letter-spacing: 10px;
+    font-family: sans-serif;
+}
+
+h3{
+    text-align: start; /*this is similar to the left and like wise end i.e. right*/
+    text-decoration: pink line-through;
+    font-size: 50px;
+}
+
+p{
+    text-align: justify;
+    font-weight: 100;
+    text-decoration: violet overline;
+    line-height: 2.5;
+}
+
+a{
+    text-decoration: none;
+}

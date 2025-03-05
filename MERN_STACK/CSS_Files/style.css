@@ -1,4 +1,19 @@
 h1{
-    color: blueviolet;
-    background-color: yellow;
+    color: yellow;
+    background-color: black;
+}
+
+p{
+    color: red;
+}
+
+button{
+    color: gold;
+    background-color: black;
+}
+
+h2{
+    /* color: rgb(0, 0, 0); */
+    color: #ff00ff;
+    background-color: #000000;
 }
