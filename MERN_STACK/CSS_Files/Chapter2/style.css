@@ -1,3 +1,96 @@
 *{
     font-family: 'Courier New';/*this is the universal selector*/
 }
+
+h1,h3{
+    color: #b92b27;
+}
+
+#login{
+    background-color: white;
+}
+#signup{
+    background-color: #b92b27;
+    color: white;
+}
+
+.upvote{
+    background-color: green;
+    color: aliceblue;
+}
+
+.vote a{
+    color: purple;
+    background-color: yellow;
+}
+/* This is the decendent selector */
+nav ul li a{
+    color: hotpink;
+}
+/* This is the same line selector */
+p+h3{
+    text-decoration: underline;
+}
+/* this is the Sibling combinator */
+.upvote + button{
+    background-color: cornflowerblue;
+    color: darkblue;
+}
+
+/* This is the child combinator */
+div > input{
+    background-color: blanchedalmond;
+}
+
+/* This is the Attribute Selector */
+
+input[type="text"]{
+    color: red;
+}
+
+input[type="password"]{
+    color: green;
+}
+input[type]{
+    background-color: ghostwhite;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+h3:hover{
+    text-decoration: none;
+}
+
+button:active{
+    background-color: hotpink;
+    color: black; 
+}
+p:active{
+    font-weight: bold;
+    color: green;
+}
+
+input[type="radio"]:checked + label{
+    font-weight: bold;
+    color: red;
+}
+
+/* div:nth-of-type(2n){
+    background-color: rgb(246, 206, 146);
+} */
+
+/* Pseudo Elements */
+h1::first-letter{
+    color: green;
+}
+
+p::first-line{
+    color: green;
+}
+
+p::selection{
+    background-color: rgb(117, 117, 36);
+}
