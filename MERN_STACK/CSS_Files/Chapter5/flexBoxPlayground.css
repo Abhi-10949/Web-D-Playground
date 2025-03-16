@@ -1,0 +1,37 @@
+#container {
+    height: 600px;
+    width: 60%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start;
+    /* flex-wrap: wrap; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+    /* align-content: baseline; */
+    align-content: flex-start;
+}
+#orange{
+    align-self: baseline;
+}
+
+#blue{
+    /* flex-basis: 400px;
+    flex-grow: 1;
+    flex-shrink: 1; */
+    flex: 2 2 100px; 
+}
+
+h1 {
+    text-align: center;
+}
+
+#container div {
+    height: 100px;
+    width: 300px;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
