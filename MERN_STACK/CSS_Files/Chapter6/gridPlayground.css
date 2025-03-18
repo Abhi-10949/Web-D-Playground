@@ -13,6 +13,9 @@
     grid-gap: 10px 10px; /* short hand */
     justify-items: center;  /* it is used for the container to palce horizontaly */
     align-items: center;/* it used for the container to place it vertically */
+    justify-items: center;
+    align-items: start; /* it is used to place the item vertically in the container */
+    place-items: start;
 }
 .item{
     width: 100px;
@@ -27,6 +30,7 @@
     /* grid-column: 1/4; short-hand */
     /* grid-column: 1/span 2; */
     justify-self: end;
+    place-self: start;
 }
 .two{
     /* grid-row-start: 1;
