@@ -33,3 +33,16 @@ let firstName = "Abhishek";
 if (firstName == "Abhishek"){
     console.log(`Welocome ${firstName}`);
 }
+
+
+// traffic light 
+let color = "red";
+if(color=="red"){
+    console.log("Stop");
+}
+else if(color=="yellow"){
+    console.log("Wait for a while..");
+}
+else{
+    console.log("GO");
+}
