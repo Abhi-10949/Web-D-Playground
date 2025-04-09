@@ -88,3 +88,28 @@ switch(colour){
     default:
         console.log("Broken light.");
 }
+
+// alert 
+// alert("this is a simple alert!");
+
+// console.error("This is an error message!");
+// console.warn("This is an warning message!")
+
+// prompts
+// let fN=prompt("Enter your name:");
+// console.log(fN);
+
+
+// to check whether the two number having the same last digit 
+let num1 = prompt("Enter the first number");
+let num2 = prompt("Enter the second number:");
+
+let n1 = num1.length;
+let n2 = num2.length;
+
+if(num1[n1-1]==num2[n2-1]){
+    console.log("Both the number have the same last digits.");
+} else{
+    console.log("The last digits are different to both the numbers.")
+}
+
