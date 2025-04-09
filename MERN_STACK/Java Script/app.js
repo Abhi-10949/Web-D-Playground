@@ -37,12 +37,54 @@ if (firstName == "Abhishek"){
 
 // traffic light 
 let color = "red";
-if(color=="red"){
+if(color==="red"){
     console.log("Stop");
 }
-else if(color=="yellow"){
+else if(color==="yellow"){
     console.log("Wait for a while..");
 }
 else{
     console.log("GO");
+}
+
+// Popcorn pries 
+let size = "XL";
+if(size==="XL"){
+    console.log("Price is 250 rupees.");
+} else if(size === "L"){
+    console.log("Price is 200 rupees.");
+} else if (size === "M"){
+    console.log("Price is 100 rupees.");
+} else {
+    console.log("Price is 50 rupees.")
+}
+
+// to check wheter the string is good or not by checking it's 1st character as 'a' and
+// also have the minimum of 3 character.
+
+let str1 = "spp";
+let s = str1.length;
+if((str1[0] === "a") && (s>3)){
+    console.log("The given string is the GOOD String.");
+} else {
+    console.log("String is not GOOD.")
+}
+
+// Switch Case
+let colour = "red";
+switch(colour){
+    case "red":
+        console.log("Stop!!");
+        break;
+    
+    case "yellow":
+        console.log("Yellow.");
+        break;
+
+    case "green":
+        console.log("Green.");
+        break;
+        
+    default:
+        console.log("Broken light.");
 }
