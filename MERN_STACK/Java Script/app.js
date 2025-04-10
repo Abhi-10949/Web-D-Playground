@@ -101,15 +101,27 @@ switch(colour){
 
 
 // to check whether the two number having the same last digit 
-let num1 = prompt("Enter the first number");
-let num2 = prompt("Enter the second number:");
+// let num1 = prompt("Enter the first number");
+// let num2 = prompt("Enter the second number:");
 
-let n1 = num1.length;
-let n2 = num2.length;
+// let n1 = num1.length;
+// let n2 = num2.length;
 
-if(num1[n1-1]==num2[n2-1]){
-    console.log("Both the number have the same last digits.");
-} else{
-    console.log("The last digits are different to both the numbers.")
-}
+// if(num1[n1-1]==num2[n2-1]){
+//     console.log("Both the number have the same last digits.");
+// } else{
+//     console.log("The last digits are different to both the numbers.")
+// }
+
+
+// tirm method
+
+let msg = "     Hello     ";
+// console.log(msg.trim())
+
+// method chaining
+let newMsg = msg.trim().toUpperCase();
+console.log(newMsg);
+
+let msg1 = "ILoveCoding";
 
