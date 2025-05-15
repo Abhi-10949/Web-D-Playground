@@ -129,3 +129,14 @@ let msg1 = "ILoveCoding";
 
 let student = ["radhae", "shyam", "balram"];
 
+
+console.log("Hello World!");
+console.log("Sum of ", a+b);
+
+let pencilPrice = 5;
+let eraserPrice = 3;
+let output1 = `The total price ${pencilPrice+eraserPrice} Rupees. `
+console.log(output1);
+
+let output2 = `The total price ${eraserPrice} Rupees. `
+console.log(output2);
