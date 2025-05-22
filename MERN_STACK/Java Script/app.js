@@ -220,32 +220,159 @@
  */
 
 
-   let todo=[];
-   let req = prompt("please enter your request");
+//    let todo=[];
+//    let req = prompt("please enter your request");
 
-   while(true){
-    if(req == "quit"){
-        console.log("quiting app!");
-        break;
+//    while(true){
+//     if(req == "quit"){
+//         console.log("quiting app!");
+//         break;
+//     }
+
+//     if(req == "list"){
+//         console.log("---------------------");
+//         for(let i = 0;i<todo.length;i++){
+//             console.log(i, todo[i]);
+//         }
+//         console.log("---------------------");
+//     } else if(req == "add"){
+//         let task = prompt("please enter the task you want to add");
+        // todo.push(task);
+//         console.log("task added");
+//     } else if (req = "delete"){
+//         let idx = prompt("please enter the task index");
+//         todo.splice(idx,1);
+//         console.log("Task deleted");
+//     } else{ 
+//         console.log("wrong request")
+//     }
+
+//     req = prompt("please enter your request");
+//    }
+
+
+// let arr=[1,2,3,4,5,6,2,3];
+// let num = 2;
+// for(let i = 0;i<arr.length;i++){
+//     if(arr[i]==num){
+//         arr.splice(i, 1);
+//     }
+// }
+// console.log(arr)
+
+
+// to find the largest number in the given array itself
+
+// let arr = [2,5,10, 4, 2, 7, 1, 9];
+// let largest = 0;
+
+// for(let i = 0;i< arr.length;i++){
+//     if(largest< arr[i]){
+//         largest = arr[i];
+//     }
+// }
+
+// console.log(largest);
+
+
+
+
+// now we are going to start OBJECT Literals
+// const student = {
+//     name : "abhishek",
+//     age: 19,
+//     cgpa: 7.79
+// };
+
+// const posts= {
+//     username : "@abhi77rajput",
+//     content : "This is my #firstPost",
+//     likes : 120,
+//     reposts: 2,
+//     tags: ["@codeForce", "@leetCode", "@hackerRank"]
+// };
+
+// conversion in get values
+
+// let obj = {
+//     1: "a",
+//     2: "b",
+//     true: "c",
+//     null: "d",
+//     undefined: "e"
+// };
+
+
+// nested objects 
+// const classInfo ={
+//     aman: {
+//         grade: "A+",
+//         city: "Delhi"
+//     },
+//     sradha: {
+//         grade: "A",
+//         city: "Lucknow"
+//     },
+//     rajat: {
+//         grade: "A+",
+//         city: "Patna"
+//     }
+// };
+
+// Guessing Game
+// const max = prompt("Enter the maximum number:");
+
+// const random = Math.floor(Math.random()*max)+1;
+
+// let guess = prompt("Guess the number:");
+
+// while(true){
+//     if(guess == "quit"){
+//         console.log("user quit");
+//         break;
+//     }
+
+//     if(guess == random){
+//         console.log("Congrats!! you are right! random number was ", random);
+//         break;
+//     } else if(guess<random){
+//         guess = prompt("your guess was too small. please try again");
+//     } else{
+//         guess = prompt("your guess was too large. please try againg")
+//     }
+// }
+
+// const car = {
+//     name: "G-Wagon",
+//     model: "top variant",
+//     color: "white"
+// };
+// console.log(car.name);
+
+// functions in java script
+// function hello(){
+//     console.log("Hello world!!");
+// }
+
+// hello();  // this is the function calling 
+// hello();  // this is the function calling 
+// hello();  // this is the function calling 
+
+// function fun1to5(){
+//     for(let i =1;i<=5;i++){
+//         console.log(i+" ");
+//     }
+// }
+
+// fun1to5();
+
+let i = prompt("Enter the value");
+function eligible(){
+    if(i>=18 && i<=28){
+        console.log("You are eligible for the upcoming CDS examination.");
+    } else{
+        console.log ("You are not eligible for the upcoming examination.");
     }
+}
 
-    if(req == "list"){
-        console.log("---------------------");
-        for(let i = 0;i<todo.length;i++){
-            console.log(i, todo[i]);
-        }
-        console.log("---------------------");
-    } else if(req == "add"){
-        let task = prompt("please enter the task you want to add");
-        todo.push(task);
-        console.log("task added");
-    } else if (req = "delete"){
-        let idx = prompt("please enter the task index");
-        todo.splice(idx,1);
-        console.log("Task deleted");
-    } else{ 
-        console.log("wrong request")
-    }
-
-    req = prompt("please enter your request");
-   }
+eligible();
