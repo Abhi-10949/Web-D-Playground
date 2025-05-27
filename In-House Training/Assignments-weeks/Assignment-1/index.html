@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web 3.0 Future</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff;
+      line-height: 1.6;
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 1.5rem;
+    }
+
+    header img {
+      width: 40px;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      padding: 0.5rem 0;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #f15d51;
+      border-bottom: 2px solid #f15d51;
+      transition: all 0.3s ease;
+}
+
+/* NAVBAR LAYOUT */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: white;
+  position: relative;
+}
+
+/* LOGO */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* HAMBURGER ICON (hidden by default on desktop) */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* HIDE MENU TOGGLE INPUT */
+.menu-toggle {
+  display: none;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 100;
+    width: 200px;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* Show nav when checkbox is checked */
+  .menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+}
+
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 0 1.5rem 2rem;
+    }
+
+    .left {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .left img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .left h1 {
+      font-size: 2.5rem;
+      margin: 1rem 0 1rem;
+    }
+
+    .left p {
+      color: #666;
+      font-size: 1rem;
+    }
+
+    .read-more {
+      display: inline-block;
+      background: #f15d51;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      margin-top: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .read-more:hover {
+      background-color: #000;
+    }
+
+    .right {
+      flex: 1;
+      min-width: 280px;
+      background-color: #00001a;
+      color: white;
+      padding: 1.5rem;
+    }
+
+    .right h3 {
+      color: #e9aa52;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .right div + div {
+      border-top: 1px solid #444;
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+
+    .right h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .right p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    .bottom {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+
+    .bottom > div {
+      flex: 1;
+      min-width: 250px;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .bottom img {
+      width: 100px;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .bottom h2 {
+      font-size: 1.8rem;
+      color: #c8c8c8;
+    }
+
+    .bottom h3 {
+      margin: 0.3rem 0;
+    }
+
+    .bottom p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+
+      .bottom {
+        flex-direction: column;
+      }
+
+      .bottom > div {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .left h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      nav a {
+        margin: 0.3rem 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .bottom > div {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .bottom img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><img src="./public/images/logo.svg" alt="Logo"></div>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+      <div class="nav-links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#">New</a>
+      <a href="#">Popular</a>
+      <a href="#">Trending</a>
+      <a href="#">Categories</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="main">
+    <div class="left">
+      <img src="./public/images/image-web-3-desktop.jpg" alt="Web 3.0 Future">
+      <h1>The Bright Future of Web 3.0?</h1>
+      <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+      <a class="read-more" href="#">READ MORE</a>
+    </div>
+    <div class="right">
+      <h3>New</h3>
+      <div>
+        <h4>Hydrogen VS Electric Cars</h4>
+        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+      </div>
+      <div>
+        <h4>The Downsides of AI Artistry</h4>
+        <p>What are the possible adverse effects of on-demand AI image generation?</p>
+      </div>
+      <div>
+        <h4>Is VC Funding Drying Up?</h4>
+        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </div>
+      <div>
+        <h4>The Downsides of AI Artistry</h4>
+        <p>What are the possible adverse effects of on-demand AI image generation?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div>
+      <img src="./public/images/image-retro-pcs.jpg" alt="Retro PCs">
+      <div>
+        <h2>01</h2>
+        <h3>Reviving Retro PCs</h3>
+        <p>What happens when old PCs are given modern upgrades?</p>
+      </div>
+    </div>
+    <div>
+      <img src="./public/images/image-top-laptops.jpg" alt="Top Laptops">
+      <div>
+        <h2>02</h2>
+        <h3>Top 10 Laptops of 2024</h3>
+        <p>Our best picks for various needs and budgets.</p>
+      </div>
+    </div>
+    <div>
+      <img src="./public/images/image-gaming-growth.jpg" alt="Gaming Growth">
+      <div>
+        <h2>03</h2>
+        <h3>The Growth of Gaming</h3>
+        <p>How the pandemic has sparked fresh opportunities.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

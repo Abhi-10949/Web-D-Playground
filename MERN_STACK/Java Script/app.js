@@ -1,6 +1,8 @@
 // console.log("Hello World!");
 // console.log("Abhishek Kumar");
 
+// const { jsx } = require("react/jsx-runtime");
+
 // let a = 10;
 // let b = 5;
 // console.log("Sum is : ", a+b);
@@ -366,13 +368,246 @@
 
 // fun1to5();
 
-let i = prompt("Enter the value");
-function eligible(){
-    if(i>=18 && i<=28){
-        console.log("You are eligible for the upcoming CDS examination.");
-    } else{
-        console.log ("You are not eligible for the upcoming examination.");
-    }
-}
+// let i = prompt("Enter the value");
+// function eligible(){
+//     if(i>=18 && i<=28){
+//         console.log("You are eligible for the upcoming CDS examination.");
+//     } else{
+//         console.log ("You are not eligible for the upcoming examination.");
+//     }
+// }
 
-eligible();
+// eligible();
+
+
+// function rollDice(){
+// let rand = Math.floor(Math.random()*6)+1;
+// console.log(rand);
+// }
+
+
+// rollDice();
+// rollDice();
+// rollDice();
+// rollDice();
+// rollDice();
+// rollDice();
+
+// function printName(name, age){
+//     console.log(`${name}'s age is ${age}.`);
+// }
+
+// printName("Abhishek", 19);
+// printName("Arpit");
+// printName(13); //order is mandatory
+
+// function printTable(n){
+//     for(let i = n;i<= n*10;i+=n)
+//         console.log(i);
+// }
+
+// printTable(2);
+
+// function sum (a, b,c){
+//     return a+b;
+// }
+
+// console.log(sum(sum(1,2), 3));
+
+
+
+// function getsum(n){
+//     let sm = 0;
+
+//     for(let i = 1;i<=n;i++){
+//         sm += i;
+//     }
+//     return sm;
+// }
+
+// let str = ["Hi", "Hello", "Bye", "!"];
+
+// function concat(str){
+//     let result="";
+//     for(let i = 0;i<str.length;i++){
+//         result += str[i];
+//     }
+//     return result;
+// }
+
+
+// there are three types of scopes:
+// 1. Block scope
+// 2. Fuction scope
+// 3. Lexical scope
+
+
+/* function expression */
+// let sum = function(a, b){
+//     return a+b;
+// }
+
+// let hello = function(){
+//     console.log("hello");
+// }
+
+/* Heigher Order Function */
+// function multipleFunction(func, n){
+//     for(let i = 1;i<=n;i++){
+//         func();
+//     }
+// }
+
+// let greet = function(){
+//     console.log("hello");
+// }
+
+// multipleFunction(greet, 4); //we always call the function without there arguments
+
+
+
+// Function's are the Methods when they are used inside the object;
+
+// const calculator={
+//     num: 55, // property
+//     add: function(a,b){
+//         return a+b;
+//     }, 
+
+//     sub: function(a,b){
+//         return a-b;
+//     },
+
+//     mul: function(a,b){
+//         return a*b;
+//     }
+// };
+
+
+// let arr=[2,3,5,4];
+// let num = 5;
+
+// function getElement(arr,num){
+//     for(let i = 0;i<num;i++){
+//         if(arr[i]>num){
+//             console.log(arr[i]);
+//         }
+//     }
+// }
+
+// getElement(arr,num);
+
+// const student={
+//     name: "Akash",
+//     age: 19,
+//     phy: 89,
+//     maths: 97,
+//     eng: 94,
+//     getAvg(){
+//         // console.log(this)
+//         let average = (this.phy+this.maths+this.eng)/3;
+//         console.log(`${this.name} got the avg marks = ${average}`);
+//     }
+// };
+
+// student.getAvg(); 
+
+
+// try-catch block
+
+// try{
+//     console.log(a);
+// } catch(err){
+//     console.log("caught an error.. valriable a is not defined");
+//     console.log(err);
+// }
+
+
+
+// Arrow Functions
+
+// let sum = (a,b)=>{
+//     console.log(a+b);
+// };
+
+
+// const cube = (n)=>{
+//     return n * n*n;
+// };
+
+
+// implicit return in arrow function
+// const mul = (a,b)=> (a*b);
+
+
+// setTimeout function:
+// console.log("Hello there!");
+
+// setTimeout(()=>{
+//     console.log("Apna College");
+// },4000);
+
+// console.log("welcome to");
+
+
+
+// setInterval function:
+// let id = setInterval(()=>{
+//     console.log("Apna College");
+// },2000);
+
+
+// console.log(id);
+
+
+
+// to stop the interval of any individual function we use
+// -->{clearInterval function}<--by passing the id as the parameter to that 
+// function
+
+
+// this with arrow function
+
+// const student= {
+//     name: "aman",
+//     marks: 95,
+//     prop: this, //global scope
+//     getName: function (){
+//       return this.name;
+//     },
+//     getMarks: ()=>{
+//       console.log(this); // parent's scope -> window
+//       return this.marks;
+//     },
+//     getInfo1: function(){
+//         setTimeout(()=>{
+//           console.log("Apna College");//this is the student object
+//         },2000);
+//     },
+
+//     getInfo2: function(){
+//       setTimeout( function() {
+//         console.log(this); // window object
+//       },2000)
+//     }
+// };
+
+// let id = setInterval(()=>{
+//   console.log("Hello World!");
+// }, 2000);
+
+// setTimeout(()=>{
+//   clearInterval(id);
+//   console.log("ClearInterval get ran.")
+// },10000);
+
+const arrayAverage = (arr)=>{
+  let total = 0;
+  for(let number of arr){
+    total = total+ number;
+  }
+  return total/ arr.length;
+};
+
+let arr= [1,2,3,4,5,6];
+console.log(arrayAverage(arr));
