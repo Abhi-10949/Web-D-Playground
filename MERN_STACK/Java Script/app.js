@@ -601,13 +601,158 @@
 //   console.log("ClearInterval get ran.")
 // },10000);
 
-const arrayAverage = (arr)=>{
-  let total = 0;
-  for(let number of arr){
-    total = total+ number;
-  }
-  return total/ arr.length;
+// const arrayAverage = (arr)=>{
+//   let total = 0;
+//   for(let number of arr){
+//     total = total+ number;
+//   }
+//   return total/ arr.length;
+// };
+
+// let arr= [1,2,3,4,5,6];
+// console.log(arrayAverage(arr));
+
+
+
+// for-each loop
+// let arr = [1,2,3,4,5];
+
+// method 1
+// let print = function(el){
+//   console.log(el);
+// }
+
+// arr.forEach(print)
+
+
+// method 2
+// arr.forEach(function(el){
+//   console.log(el);
+// });
+
+// we can also use for-each for the objects also
+
+// let student = [{
+//             name: "aman", marks: 95,},
+//             {name: "rohan", marks: 94,},
+//             {name: "ashish", marks: 96}];
+
+// let gpa = student.map((el)=>{
+//   return el.marks / 10;
+// });
+// console.log(gpa);
+
+// arr.forEach((student)=>{
+//   console.log(student.marks);
+// })
+
+// let num = [1,2,3,4,5];
+// let double = num.map((el)=>{
+//   return el*2;
+// });
+
+// console.log(double);
+
+// filter function 
+// let n = [1,2,3,4,5,12,10,3,9];
+// let ans = n.filter((el)=>{
+//   return !(el %2==0);
+// })
+
+// console.log(ans);
+
+// Every function
+// console.log([1,2,3,4,5].every((el)=>(el%2==0)));
+
+// console.log(n.every((el)=>!((n%2== 0))));
+
+
+// let num = [1,2,3,4];
+// let finalValue = num.reduce((result, el)=>{
+//   console.log(result)
+//   return result+el;
+// })
+
+// console.log(finalValue);
+
+// let arr =[2,4,1,32,454,3412];
+
+// let max = arr.reduce((max,el)=>{
+//   if(max<el){
+//     return el;
+//   } else{
+//     return max;
+//   }
+// });
+// console.log(max);
+
+// let div = arr.every((el)=>{
+//   return el%10 == 0;
+// })
+
+// console.log(div)
+
+// let min = arr.reduce((min,el)=>{
+//   if(min<el){
+//     return min;
+//   } else{
+//     return el;
+//   }
+// });
+// console.log(min);
+
+// function sum(a, b= 3){
+//   return a+b;
+// }
+// console.log(sum(1,4));  
+
+//NOTE:
+// always use the default parameter to the end of the function parameter
+// instead of using at the begining of the function parameter.
+
+
+// const data = {
+//   email: "ironman@gmail.com",
+//   password: "abcd",
+// };
+
+// const dataCopy = {...data, id: 123, country: "India"};
+
+// let arr = [1,2,3,4,5];
+// let newarr = {...arr}
+
+
+//rest 
+// function sum (...args){
+//   return args.reduce((sum, el)=> sum + el);
+// }
+
+
+// function min(...args){
+//   return args.reduce((min,el)=>{
+//     if(min<el){
+//       return min;
+//     } else{
+//       return el;
+//     }
+//   })
+// }
+
+
+// dectructuring 
+// let names = ["tony", "bruce", "peter", "steve", "abc", "xyz","abhishek"];
+// let [winner, runnerUp, secondRunnerUp , ...others]= names;
+
+
+// destructuring with objects
+const student = {
+  name: "aman",
+  age: 19,
+  class: 12,
+  subjects: ["chemistry", "physics", "maths", "english", "PT"],
+  username: "aman@123",
+  password: "abcd",
+  // city: "Mumbai"
 };
 
-let arr= [1,2,3,4,5,6];
-console.log(arrayAverage(arr));
+let {username: user, password, city: place= "Chandigarh", ...others}= student;
