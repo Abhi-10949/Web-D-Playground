@@ -27,14 +27,27 @@ let btns = document.querySelectorAll("button");
 // };
 
 for(btn of btns){
-  btn.onclick = sayHello;
-  btn.onmouseenter = function(){
-    console.log("You entered a button.")
-  }
+  // btn.onclick = sayHello;
+  // btn.onclick = sayName;
+
+  // btn.onmouseenter = function(){
+  //   console.log("You entered a button.")
+  // }
+
+  // event listners
+  // btn.addEventListener("click", sayHello);
+  // btn.addEventListener("click", sayName);
+  btn.addEventListener("dblclick", function(){
+    console.log("You double clicked me!");
+  });
 }
 
 function sayHello(){
   alert("Hello");
+};
+
+function sayName(){
+  alert("Abhishek Kumar! Welcome to JS World!!");
 };
 
 // function likeMe(){
