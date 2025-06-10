@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: Arial;
 }
 
@@ -29,4 +29,35 @@ body {
 
 #description {
   background-color: antiquewhite;
+} */
+
+
+
+
+
+
+/* Activity */
+/* body{
+  text-align: center;
+  /* display: flex; */
+/* }
+div{
+  height: 100px ;
+  width: 500px;
+  border: 1px solid black;
+  margin: auto;
+} */ 
+
+div{
+  height: 200px;
+  width: 400px;
+  background-color: pink;
+}
+
+ul{
+  background-color: blue;
+}
+
+li{
+  background-color: yellowgreen;
 }
