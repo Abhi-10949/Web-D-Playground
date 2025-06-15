@@ -1,20 +1,20 @@
-// h1 = document.querySelector("h1");
+h1 = document.querySelector("h1");
 
-// function changeColor(color,delay){
-//     setTimeout(()=>{
-//         h1.style.color = color;
-//     }, delay);
-// }
+function changeColor(color,delay){
+    setTimeout(()=>{
+        h1.style.color = color;
+    }, delay);
+}
 
 
-// changeColor("red", 1000);
-// changeColor("violet", 2000);
-// changeColor("orange", 3000);
-// changeColor("green", 4000);
-// changeColor("yellow", 5000);
-// changeColor("purple", 6000);
-// changeColor("pink", 7000);
-// changeColor("yellowgreen", 8000);
+changeColor("red", 1000);
+changeColor("violet", 2000);
+changeColor("orange", 3000);
+changeColor("green", 4000);
+changeColor("yellow", 5000);
+changeColor("purple", 6000);
+changeColor("pink", 7000);
+changeColor("yellowgreen", 8000);
 
 
 // all about callBack Hell & Promises(the promise object represent the 
@@ -42,25 +42,39 @@
 // });
 
 
-function savedB(data){
-    return new Promise((resolve, reject)=> {
-        let internetSpeed = Math.floor(Math.random() *10)+1;
-        if(internetSpeed > 4){
-            resolve("success : data was saved.");
-        } else{
-            reject("failure : weak connection.");
-        }
-    })
-};
+// function savedB(data){
+//     return new Promise((resolve, reject)=> {
+//         let internetSpeed = Math.floor(Math.random() *10)+1;
+//         if(internetSpeed > 4){
+//             resolve("success : data was saved.");
+//         } else{
+//             reject("failure : weak connection.");
+//         }
+//     })
+// };
 
 
-let request = savedB("apna college"); //req = promise object
+// //req = promise object
 
-request.then(()=> { // .then will happened when promise will resolved
-    console.log("promise was resolved."); 
-    console.log(request);
-})
-.catch(()=> { // .catch will happened when promice failure will be catched and resolved.
-    console.log("promise was rejected.");
-    console.log(request);
-})
+// savedB("apna college")
+//     .then((result)=> { // .then will happened when promise will resolved
+//         console.log("data1 saved"); 
+//         // console.log(request);
+//         console.log("result of promise "+result);
+//         return savedB("hello World");
+//         })
+//         // here you will see the promice chaining
+//         .then((result)=>{
+//             console.log("data2 saved.");
+//             return savedB("abhishek");
+//             console.log("result of promise "+result);
+//         })
+//         .then((result)=>{
+//             console.log("data3 saved.");
+//             console.log("result of promise "+result);
+//         })
+//     .catch((error)=> { // .catch will happened when promice failure will be catched and resolved.
+//         console.log("promise was rejected.");
+//         // console.log(request);
+//         console.log("result of promise "+error);
+//     })
