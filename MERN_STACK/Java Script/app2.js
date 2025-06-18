@@ -1,34 +1,34 @@
-h1 = document.querySelector("h1");
+// h1 = document.querySelector("h1");
 
-function changeColor(color,delay){
-    return new Promise((resolve, reject)=>{
-        setTimeout(()=>{
-        let num = Math.floor(Math.random()*5)+1;
-        if(num< 3){
-            reject("promise was rejected"); // here the promise will get rejected
-        }
-        h1.style.color = color;
-        resolve("color changed!")
-    }, delay);
-    })
-}
+// function changeColor(color,delay){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//         let num = Math.floor(Math.random()*5)+1;
+//         if(num< 3){
+//             reject("promise was rejected"); // here the promise will get rejected
+//         }
+//         h1.style.color = color;
+//         resolve("color changed!")
+//     }, delay);
+//     })
+// }
 
-async function demo(){
-    try{
-        await changeColor("red", 1000);
-        await changeColor("orange", 1000);
-        await changeColor("green", 1000);
-        await changeColor("blue", 1000);
-        await changeColor("yellow", 1000);
-    } catch(err){
-        console.log("error caught.");
-        console.log(err);
-    }
+// async function demo(){
+//     try{
+//         await changeColor("red", 1000);
+//         await changeColor("orange", 1000);
+//         await changeColor("green", 1000);
+//         await changeColor("blue", 1000);
+//         await changeColor("yellow", 1000);
+//     } catch(err){
+//         console.log("error caught.");
+//         console.log(err);
+//     }
 
-    let a = 5;
-    console.log(a);
-    console.log("new number = ", a+3);
-}
+//     let a = 5;
+//     console.log(a);
+//     console.log("new number = ", a+3);
+// }
 
 // changeColor("red", 1000)
 // .then(()=>{
@@ -174,16 +174,16 @@ async function demo(){
 
 // accessing data from JSON 
 // JSON.parse(data) method: this is used to parse the string data into a js object
-let jsonRes = '{"fact":"Cat families usually play best in even numbers. Cats and kittens should be aquired in pairs whenever possible.","length":110}';
-let validRes = JSON.parse(jsonRes);
-console.log(validRes.fact);
+// let jsonRes = '{"fact":"Cat families usually play best in even numbers. Cats and kittens should be aquired in pairs whenever possible.","length":110}';
+// let validRes = JSON.parse(jsonRes);
+// console.log(validRes.fact);
 
 // JSON.stringify(json) method: this is used to parse a js object into data into JSON
-let student = {
-    name: "abhishek",
-    uid: "23bcs10949",
-    branch: "CSE"
-};
+// let student = {
+//     name: "abhishek",
+//     uid: "23bcs10949",
+//     branch: "CSE"
+// };
 
 
 // TO test the API request we use [tools]:
@@ -204,3 +204,113 @@ let student = {
 // 404 - Not Found
 // 400 - Bad Request
 // 500 - Internal Server Error etc.
+
+
+
+// Our first API Request
+
+// let url = "https://catfact.ninja/fact";
+// fetch(url)
+// .then((response)=>{
+    // console.log(response);
+    // console.log(response.json()); // this will make the data readable
+    // response.json().then((data)=>{
+        // console.log(data);
+    // })
+    // return response.json();
+    
+// })
+// .then((data)=>{
+//     console.log("data1 = ", data.fact);
+//     return fetch(url);
+// })
+// .then((response)=>{
+//     return response.json();
+// })
+// .then((data2)=>{
+//     console.log("Data2 = ", data2.fact);
+// })
+// .catch((err)=>{
+//     console.log("ERROR: ", err);
+// })
+
+// // NOTE: API calls are asyncronous in nature.
+// console.log("HI, Abhishek");
+
+// let btn = document.querySelector("button");
+// btn.addEventListener("click", async ()=>{
+//     let fact = await getFacts(); 
+//     console.log(fact);
+//     let p = document.querySelector("#result");
+//     p.innerText = fact;
+// })
+
+
+// Now we will use fetch() with async and await
+// let url = "https://catfact.ninja/fact";
+// writitng the code with the help of axios
+// async function getFacts(){
+//     try{
+//         let res  = await axios.get(url);
+//         return res.data.fact;
+//     } catch(e){
+//         console.log("error is; ", e);
+//         return "NO fact found"
+//     }
+// }
+
+// async function getFacts(){
+//     try{
+//         let res  = await fetch(url);
+//         let data = await res.json();
+//         console.log(data.fact);
+//     }
+//     catch(e){
+//         console.log("error = ", e);
+//     }
+//     console.log("bye")
+// }
+
+
+// Axios: is library to make HTTP requests
+// it use's the fetch internally
+
+
+
+
+// Sending Headers with the API request's
+
+// let url = "https://catfact.ninja/fact";
+
+// async function getJokes(){
+//     try{
+//         const config = {headers:{Accept: "application/json"}}
+//         let result = await axios.get(url, config);
+//         console.log(result.data);
+//     } catch (err){
+//         console.log("error found = ", err);
+//     }
+// }
+
+
+
+
+// activity using query strings
+let btn = document.querySelector("button");
+btn.addEventListener("click", async ()=>{
+    let country = document.querySelector("input").value;
+    console.log(country);
+    // console.log("Button was clicked.");
+    getColleges(country);
+})
+let url = "http://universities.hipolabs.com/search?name=";
+// let country = "nepal";
+async function getColleges(country){
+    try{
+        let res = await axios.get(url+country);
+        console.log(res.data);
+    } catch(e){
+        console.log("error", e);
+        return [];
+    }
+}
