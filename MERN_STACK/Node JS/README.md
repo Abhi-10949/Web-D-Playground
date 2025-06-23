@@ -7,3 +7,4 @@
 
 ## Node REPL (Read, Evaluate, Print and Loop)
 * .help :- gives us commands
+* Node Files:- node fileName.js
