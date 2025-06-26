@@ -12,7 +12,13 @@
 
 // console.log(process.argv);
 
-let args = process.argv;
-for(let i = 2;i<args.length;i++){
-    console.log("Hello to ", args[i]);
-}
+// let args = process.argv;
+// for(let i = 2;i<args.length;i++){
+//     console.log("Hello to ", args[i]);
+// }
+
+// const someValue = require("./math"); // this require() will exprot all the property
+// console.log(someValue.g);
+
+const info = require("./fruits");
+console.log(info);
