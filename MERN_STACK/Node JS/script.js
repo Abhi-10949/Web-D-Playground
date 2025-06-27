@@ -20,5 +20,25 @@
 // const someValue = require("./math"); // this require() will exprot all the property
 // console.log(someValue.g);
 
-const info = require("./fruits");
-console.log(info);
+// const info = require("./fruits");
+// console.log(info);
+
+// const figlet = require("figlet");
+
+// figlet("Abhishek Kumar!!", function (err, data) {
+//   if (err) {
+//     console.log("Something went wrong...");
+//     console.dir(err);
+//     return;
+//   }
+//   console.log(data);
+// });
+
+
+// we are dealing with import modules
+import {sum, PI} from "./math.js"; // in ES6 file extension is required
+import { generate, count } from "random-words";
+
+// console.log(sum(1,2));
+// console.log(PI);
+console.log(generate());
