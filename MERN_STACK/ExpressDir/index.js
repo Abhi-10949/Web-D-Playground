@@ -13,3 +13,7 @@ app.listen(port, ()=>{
 // NOTE : to start the server type : node index.js and to close press
 // ctrl c and on the server side type localhost:3000, ensure that the server
 // is get started
+
+app.use((req, res)=>{
+    console.log("request recevied");
+});
