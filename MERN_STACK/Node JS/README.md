@@ -54,5 +54,20 @@ npm link <- package name ->
 * In imort : but can be asynchronous.
 
 
+## Library v/s Framework
+* Library : A library is a collection  of pre-written code that can ber used to perform specific tasks. eg.:- axios
+
+* Framework : A framework is a set of pre-written code that provides the stracture for developing software applications. eg.: express
+
 
 ## All about Node : Express
+* Express : A Node.js web application framework that helps us to make web applications.
+* It is used for server side programming.
+* We will mainly use express for the following :-
+* ➔ Listen for incoming request
+* ➔ Uesd for parsing the request
+* ➔ Mtach with the suitable route
+* ➔ And according to request generate the response.
+
+* NOTE : Express is located on the server-side
+
