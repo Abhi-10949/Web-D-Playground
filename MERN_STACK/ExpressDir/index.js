@@ -31,7 +31,7 @@ app.listen(port, ()=>{
 
 
 app.get("/", (req, res)=>{
-    res.send("you contacted to root path");
+    res.send("hello you contacted to root path");
 })
 
 app.get("/search", (req, res)=> {
