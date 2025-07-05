@@ -71,3 +71,14 @@ npm link <- package name ->
 
 * NOTE : Express is located on the server-side
 
+## Routing: it is the process of selecting the path for traffic in a network or between or across multiple networks.
+
+* NOTE: res.send() this function is used to send the respond to the browser with
+the help of server
+
+* We can able to send only one responce for the same path it may be either : snigle string single HTML page  or it may be a single object
+
+## Nodemon (package)
+* To automatically restart the server with code changes
+* to install use : npm install -g nodemon OR sudo npm install -g nodemon
+
