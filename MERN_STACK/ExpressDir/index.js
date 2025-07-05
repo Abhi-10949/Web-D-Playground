@@ -51,13 +51,26 @@ app.get("/:username/:id/:section", (req, res) => {
 // })
 
 
-// // We can treat this route as the while case 😉
-// // For any GET request that doesn’t match any 
-// // previously defined route, send this response.
-// // app.get("*", (req, res)=>{
-// //     res.send("this path does not exist.");
-// // })
+// We can treat this route as the while case 😉
+// For any GET request that doesn’t match any 
+// previously defined route, send this response.
+// app.get("*", (req, res)=>{
+//     res.send("this path does not exist.");
+// })
 
 // app.post("/", (req,res)=>{
 //     res.send("you sent a post req to root");
 // })
+
+
+
+// Querry Strings
+app.get("/search", (req, res)=>{
+    // console.log(req.query);
+    let {q} = req.query;
+    if(!q){
+        res.send("<h1>nothing searched!</h1>");
+    }
+    res.send(`<h1>this are the search results for querry: ${q}.</h1>`);
+    // res.send("no result");
+})
