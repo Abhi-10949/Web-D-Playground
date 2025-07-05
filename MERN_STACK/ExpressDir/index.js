@@ -34,10 +34,13 @@ app.get("/", (req, res)=>{
     res.send("hello I am root path");
 });
 
-app.get("/:username/:id", (req, res) => {
-    console.log(req.params);
-    res.send("hello I am root path")
-})
+app.get("/:username/:id/:section", (req, res) => {
+    // console.log(req.params);
+    let {username, id, section} = req.params;
+    // let htmlCode = `<h1>Welcome to the page of @${username}.</h1>`
+    res.send(`Welcome to the page of @${username}.`);
+    // res.send(htmlCode);
+});
 
 // app.get("/search", (req, res)=> {
 //     res.send("you contacted to search path");
