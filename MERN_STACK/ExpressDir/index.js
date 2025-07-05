@@ -31,25 +31,30 @@ app.listen(port, ()=>{
 
 
 app.get("/", (req, res)=>{
-    res.send("hello you contacted to root path");
+    res.send("hello I am root path");
+});
+
+app.get("/:username/:id", (req, res) => {
+    console.log(req.params);
+    res.send("hello I am root path")
 })
 
-app.get("/search", (req, res)=> {
-    res.send("you contacted to search path");
-})
-
-app.get("/about", (req, res)=>{
-    res.send("you contected to about path");
-})
-
-
-// We can treat this route as the while case 😉
-// For any GET request that doesn’t match any 
-// previously defined route, send this response.
-// app.get("*", (req, res)=>{
-//     res.send("this path does not exist.");
+// app.get("/search", (req, res)=> {
+//     res.send("you contacted to search path");
 // })
 
-app.post("/", (req,res)=>{
-    res.send("you sent a post req to root");
-})
+// app.get("/about", (req, res)=>{
+//     res.send("you contected to about path");
+// })
+
+
+// // We can treat this route as the while case 😉
+// // For any GET request that doesn’t match any 
+// // previously defined route, send this response.
+// // app.get("*", (req, res)=>{
+// //     res.send("this path does not exist.");
+// // })
+
+// app.post("/", (req,res)=>{
+//     res.send("you sent a post req to root");
+// })
