@@ -82,3 +82,8 @@ the help of server
 * To automatically restart the server with code changes
 * to install use : npm install -g nodemon OR sudo npm install -g nodemon
 
+
+## Node : EJS(Embedded Java Script Templates)
+* EJS is a simple templating language that lets you generate HTML markup with plain JavaScript.
+
+## Templating : it can be termed as Blueprint/loayout
