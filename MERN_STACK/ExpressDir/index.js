@@ -73,4 +73,4 @@ app.get("/search", (req, res)=>{
     }
     res.send(`<h1>this are the search results for querry: ${q}.</h1>`);
     // res.send("no result");
-})
+});
