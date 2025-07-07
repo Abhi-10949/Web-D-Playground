@@ -87,3 +87,19 @@ the help of server
 * EJS is a simple templating language that lets you generate HTML markup with plain JavaScript.
 
 ## Templating : it can be termed as Blueprint/loayout
+* to initilize the json package with the default settings we use : npm init -y .
+* we also install express using: npm i express .
+* alos install EJS: npm i ejs .
+* NOTE: we do not require EJS because Express automatically rquire it internaly as mentioned below:
+* `app.set("view engine", "ejs");`
+
+* NOTE: In EJS we do not send the messages we use to do "rendering i.e.,  sending the files" the messag's.
+* so for this we will create the folder in the EJS diractory as "views" as we will store the templates in this folder.
+* we will create the template using : home.ejs   in views folder
+
+* If we want to access the view folder from the server side diractory we can set the following command: app.set("views", path.join(__dirname, "/views"));
+* i this path is the package which we have to require it first: const path = require("path");
+
+## Interpolation Syntax : Interpolation refers to embedding expression in marked up text.
+* with the use of this we made the EJS dynamic.
+## for EJS documentation visit `ejs.co` .
