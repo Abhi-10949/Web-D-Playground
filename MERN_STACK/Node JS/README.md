@@ -103,3 +103,6 @@ the help of server
 ## Interpolation Syntax : Interpolation refers to embedding expression in marked up text.
 * with the use of this we made the EJS dynamic.
 ## for EJS documentation visit `ejs.co` .
+
+## Conditional Statements in EJS 
+* For this we use : <% 'Scriptlet' tag, for control-flow, no output
