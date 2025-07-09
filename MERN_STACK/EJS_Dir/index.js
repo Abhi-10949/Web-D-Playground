@@ -16,10 +16,20 @@ app.get("/hello", (req, res)=>{
 });
 
 app.get("/ig/:username", (req,res)=>{
-    const followers = ["abhishek", "harshita", "naincy", "parag", "shubham", "ayush", "rachit"];
+    // const followers = ["abhishek", "harshita", "naincy", "parag", "shubham", "ayush", "rachit"];
+    // let {username} = req.params;
+    // // console.log(username);
+    // res.render("instagram.ejs", {username, followers});
+
     let {username} = req.params;
-    // console.log(username);
-    res.render("instagram.ejs", {username, followers});
+    const instaData = require("./data.json");
+    // console.log(instaData);
+    const data = instaData[username];
+    if(data){
+        res.render("./instagram.ejs", {data});
+    } else{
+        res.render("./error.ejs");
+    }
 });
 
 app.get("/rolldice", (req, res)=>{
