@@ -106,3 +106,8 @@ the help of server
 
 ## Conditional Statements in EJS 
 * For this we use : <% 'Scriptlet' tag, for control-flow, no output
+
+## Include in EJS
+* it is the way to create the sub-template's. 
+* Includes are relative to the template with the include call.
+* <%- Outputs the unescaped value into the template.
