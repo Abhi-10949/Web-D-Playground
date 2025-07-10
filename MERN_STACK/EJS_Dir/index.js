@@ -4,6 +4,8 @@ const path = require("path"); // we require the path
 
 const port = 8080;
 
+app.use(express.static(path.join(__dirname, "public/css")));
+app.use(express.static(path.join(__dirname, "public/js")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views")); // setting views in the app to this path
 
