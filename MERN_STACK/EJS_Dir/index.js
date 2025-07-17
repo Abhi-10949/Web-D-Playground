@@ -37,7 +37,7 @@ app.get("/ig/:username", (req,res)=>{
 app.get("/rolldice", (req, res)=>{
     let dicevalue = Math.floor(Math.random() * 6)+1;
     res.render("rolldice.ejs",{num : dicevalue});
-})
+});
 
 app.listen(port, ()=>{
     console.log(`Listning on port ${port}`);
