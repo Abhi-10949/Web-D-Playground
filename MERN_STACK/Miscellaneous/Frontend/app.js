@@ -51,30 +51,63 @@
 // let p2 = new Person("naincy", 20);
 
 
-class Person {
-    constructor(name, age){
-        console.log("Person class constructor!!");
+// class Person {
+//     constructor(name, age){
+//         console.log("Person class constructor!!");
+//         this.name = name;
+//         this.age = age;
+//     }
+//     talk(){
+//         console.log(`Hi! I am ${this.name}`);
+//     }
+// }
+// class Student extends Person {
+//     constructor(name, age, marks){
+//         console.log("Student class constructor!!");
+//         super(name, age); // parent class constructor is being called
+//         this.marks = marks;
+//     }
+// }
+
+// class Teacher extends Person {
+//     constructor (name, age, subject){
+//         console.log("Teacher class constructor!!");
+//         super(name, age); // parent class constructor is being called
+//         this.subject = subject;
+//     }
+// }
+
+// let stu1 = new Student("aashi", 20, 94);
+
+
+class Mammal {
+    constructor(name){
         this.name = name;
-        this.age = age;
+        this.type = "warm-blooded";
     }
-    talk(){
-        console.log(`Hi! I am ${this.name}`);
-    }
-}
-class Student extends Person {
-    constructor(name, age, marks){
-        console.log("Student class constructor!!");
-        super(name, age); // parent class constructor is being called
-        this.marks = marks;
+    eat(){
+        console.log("I am eating.");
     }
 }
 
-class Teacher extends Person {
-    constructor (name, age, subject){
-        console.log("Teacher class constructor!!");
-        super(name, age); // parent class constructor is being called
-        this.subject = subject;
+class Dog extends Mammal {
+    constructor(name){
+        super(name);
+    }
+    bark(){
+        console.log("wofff...");
+    }
+
+    eat(){  // this will override the parent class eat function as this is of same name.
+        console.log("Dog is eating");
     }
 }
 
-let stu1 = new Student("aashi", 20, 94);
+class Cat extends Mammal{
+    constructor(name){
+        super(name);
+    }
+    meow(){
+        console.log("meow....");
+    }
+}
