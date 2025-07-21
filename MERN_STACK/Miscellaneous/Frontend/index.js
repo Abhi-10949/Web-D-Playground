@@ -3,7 +3,7 @@
 //     console.log("Hello! I am arr..");
 // }
 
-const { name } = require("ejs");
+// const { name } = require("ejs");
 
 
 // this is the first method
@@ -37,15 +37,44 @@ const { name } = require("ejs");
 
 // this is the third method
 // with the use of classes
-class Person{
+// class Person{
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     talk(){
+//         console.log(`Hi! My name is ${name}!`);
+//     }
+// }
+
+// let p1 = new Person("abhishek", 23);
+// let p2 = new Person("naincy", 20);
+
+
+class Person {
     constructor(name, age){
+        console.log("Person class constructor!!");
         this.name = name;
         this.age = age;
     }
     talk(){
-        console.log(`Hi! My name is ${name}!`);
+        console.log(`Hi! I am ${this.name}`);
+    }
+}
+class Student extends Person {
+    constructor(name, age, marks){
+        console.log("Student class constructor!!");
+        super(name, age); // parent class constructor is being called
+        this.marks = marks;
     }
 }
 
-let p1 = new Person("abhishek", 23);
-let p2 = new Person("naincy", 20);
+class Teacher extends Person {
+    constructor (name, age, subject){
+        console.log("Teacher class constructor!!");
+        super(name, age); // parent class constructor is being called
+        this.subject = subject;
+    }
+}
+
+let stu1 = new Student("aashi", 20, 94);
