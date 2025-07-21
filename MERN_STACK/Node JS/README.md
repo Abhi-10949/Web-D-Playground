@@ -111,3 +111,14 @@ the help of server
 * it is the way to create the sub-template's. 
 * Includes are relative to the template with the include call.
 * <%- Outputs the unescaped value into the template.
+
+
+
+## All about GET and POST Request
+## GET: 
+* it is used to get some response
+* data send in query string(limited, string data and visible in URL)
+
+## POST:
+* used to post something(for Create/Write/Update)
+* Data sent via request body (any type of data)
