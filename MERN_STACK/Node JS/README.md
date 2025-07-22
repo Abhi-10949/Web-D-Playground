@@ -122,3 +122,28 @@ the help of server
 ## POST:
 * used to post something(for Create/Write/Update)
 * Data sent via request body (any type of data)
+
+
+## REST (Representational State Transfer)
+* REST is an architectural style that define a set of constraints that is use for creating the web services.
+* NOTE:- from REST the concept of RESTful API comes which usees the concept/law of REST.
+* We use RESTful API to perform the CRUD operation (i.e this comes from the Data Base concept) C - Create, R - Read, U - Update, D - Delete
+* To learn more about the RESTful API visit: https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/#h-accept-and-respond-with-json
+
+* CRUD Operations:
+    * GET : retrives resources (i.e R - read)
+    * POST : to submit new data to the server (i.e C - create)
+    * PUT : update existing data
+    * PATCH : update existing data partially
+    * DELETE : removes data
+    * NOTE : resources are simply called as post(i.e username, content) in the CRUD.
+
+
+## Creating RESTful APIs :-
+*  Operation   Syntax      description                 Route/path
+
+* GET         /posts      to get data for all posts   index(main)
+* POST        /posts      to add a new post           CREATE
+* GET         /posts/:id  to get one post(using id)   VIEW
+* PATCH       /posts/:id  to update specific post     UPDATE
+* DELETE      /posts/:id  to delete specific post     DESTROY
