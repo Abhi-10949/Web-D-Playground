@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const port = 8080;
 const path = require("path"); // to use folder in index.js first we have to require the path.
+import { v4 as uuidv4 } from 'uuid';
+
 
 // to parse the data in the api request we use 
 app.use(express.urlencoded({extended : true}));
@@ -15,17 +17,17 @@ app.use(express.static(path.join(__dirname, "public")));
 
 let posts = [
     {
-        id : "1a",
+        id : uuidv4(),
         username : "abhishek",
         content : "I got selected for my first intership",
     },
     {
-        id : "2b",
+        id : uuidv4(),
         username: "sradha",
         content: "I love coding",
     },
     {
-        id: "3c",
+        id: uuidv4(),
         username: "rahulkumar",
         content: "I am a developer",
     },
@@ -60,6 +62,7 @@ app.get("/posts/:id", (req, res)=>{
     // res.send("Id is working!");
     res.render("show.ejs", {post});
 })
+// UUID Full Form : Universal unique identifier
 
 app.listen(port, ()=>{
     console.log(`Listning to port ${port}...`);
