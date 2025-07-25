@@ -11,10 +11,39 @@ app.set("view engine", "ejs");
 // seting path for views folder
 app.set("views", path.join(__dirname, "views"));
 //seting path for public folder
-app.set(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req, res)=>{
-    res.send("server is working well!");
+let posts = [
+    {
+        username : "abhishek",
+        content : "I got selected for my first intership",
+    },
+    {
+        username: "sradha",
+        content: "I love coding",
+    },
+    {
+        username: "rahulkumar",
+        content: "I am a developer",
+    },
+];
+
+app.get("/posts", (req, res)=>{
+    // to send all values of posts we will have to render for that we will
+    // make .ejs file in views
+    // res.send("server is working well!");
+    res.render("index.ejs",{posts});
+});
+
+app.get ("/posts/new", (req,res)=>{
+    res.render("new.ejs");
+});
+
+app.post("/posts", (req,res)=>{
+    let {username, content} = req.body;
+    posts.push({username, content});
+    console.log(req.body);
+    res.redirect("/posts");
 });
 
 app.listen(port, ()=>{
