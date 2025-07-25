@@ -15,14 +15,17 @@ app.use(express.static(path.join(__dirname, "public")));
 
 let posts = [
     {
+        id : "1a",
         username : "abhishek",
         content : "I got selected for my first intership",
     },
     {
+        id : "2b",
         username: "sradha",
         content: "I love coding",
     },
     {
+        id: "3c",
         username: "rahulkumar",
         content: "I am a developer",
     },
@@ -45,6 +48,18 @@ app.post("/posts", (req,res)=>{
     console.log(req.body);
     res.redirect("/posts");
 });
+
+
+// this for the show route with the help of the 
+// to get one post(using id) --> VIEW
+app.get("/posts/:id", (req, res)=>{
+    let {id} = req.params;
+    // console.log(id);
+    let post = posts.find((p)=> id === p.id);
+    // console.log(post);
+    // res.send("Id is working!");
+    res.render("show.ejs", {post});
+})
 
 app.listen(port, ()=>{
     console.log(`Listning to port ${port}...`);
