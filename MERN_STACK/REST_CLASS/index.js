@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 8080;
 const path = require("path"); // to use folder in index.js first we have to require the path.
-import { v4 as uuidv4 } from 'uuid';
+const { v4: uuidv4 } = require('uuid');
 
 
 // to parse the data in the api request we use 
@@ -46,7 +46,8 @@ app.get ("/posts/new", (req,res)=>{
 
 app.post("/posts", (req,res)=>{
     let {username, content} = req.body;
-    posts.push({username, content});
+    let id = uuidv4();
+    posts.push({id, username, content});
     console.log(req.body);
     res.redirect("/posts");
 });
