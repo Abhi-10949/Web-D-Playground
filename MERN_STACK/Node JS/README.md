@@ -147,3 +147,7 @@ the help of server
 * GET         /posts/:id  to get one post(using id)   VIEW
 * PATCH       /posts/:id  to update specific post     UPDATE
 * DELETE      /posts/:id  to delete specific post     DESTROY
+
+
+
+## NOTE: method-override -> Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
