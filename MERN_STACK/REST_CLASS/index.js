@@ -3,10 +3,11 @@ const app = express();
 const port = 8080;
 const path = require("path"); // to use folder in index.js first we have to require the path.
 const { v4: uuidv4 } = require('uuid');
-
+const methodOverride = require("method-override");
 
 // to parse the data in the api request we use 
 app.use(express.urlencoded({extended : true}));
+app.use(methodOverride('_method'));
 
 // set view engine
 app.set("view engine", "ejs");
@@ -64,6 +65,22 @@ app.get("/posts/:id", (req, res)=>{
     res.render("show.ejs", {post});
 })
 // UUID Full Form : Universal unique identifier
+
+
+app.patch("/posts/:id", (req, res)=>{
+    let {id} = req.params;
+    let newContent = req.body.content;
+    console.log(newContent);
+    // console.log(id);
+    res.send("patch request is working!");
+});
+
+
+app.get("/posts/:id/edit", (req,res)=>{
+    let {id} = req.params;
+    let post = posts.find((p) => id === p.id);
+    res.render("edit.ejs", {post});
+})
 
 app.listen(port, ()=>{
     console.log(`Listning to port ${port}...`);
