@@ -151,3 +151,37 @@ the help of server
 
 
 ## NOTE: method-override -> Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
+
+
+# Data Base : SQL (with MySQL Database)
+* NOTE: SQL is a language and MySQL is Database. And later on we will cover non-relational database as (MongoDB).
+* Database : is a collection of data in a format that can be easily accessed.
+* Why Database?
+    * can store large data.
+    * features like security, scalability etc.
+    * Easier to insert, update or delete data.
+
+
+* SQL v/s NoSQL
+    * SQL :--
+        * Relational Database (data stored in tables(table means relation))
+        * eg:- MySQL, Oracle, PostgreSQL etc.
+
+    * NoSQL:-- (it is a collection of different types of database)
+        * Non Relational Database(data stored in document/key-value/graphs etc.)
+        * eg:-- MongoDB, Cassandra, Neo4j etc.
+
+
+* SQL (Structured Query Language) : it is a programming language used to interect with relational databases.
+    * columns --> design(schema)
+    * rows --> tuple(info about singal entity)
+
+* Constraints:
+    * NOT NULL : columns can't have a null values
+    * UNIQUE : all values in columns are different
+    * DEFAULT : sets the default value of a column
+    * CHECK : it can limit the values allowed in column 
+        * this is the syntax [CONSTRAINT age_check CHECK (age>=13)] in this giving the name of the constraints is optional.
+    * PRIMARY KEY : makes a column unique and not null but used only for one.
+    * FORIGN KEY : prevent actions that would destroy links between tables
+        * FOREIGN KEY (cus_id) references customer(id),
