@@ -183,5 +183,19 @@ the help of server
     * CHECK : it can limit the values allowed in column 
         * this is the syntax [CONSTRAINT age_check CHECK (age>=13)] in this giving the name of the constraints is optional.
     * PRIMARY KEY : makes a column unique and not null but used only for one.
+        * it is column or set of columns in a table that uniquily identifies each row
+        * there is only one pk and it should not be null.
     * FORIGN KEY : prevent actions that would destroy links between tables
-        * FOREIGN KEY (cus_id) references customer(id),
+        * FOREIGN KEY (cus_id) references customer(id), <-- syntax
+        * fk is a column or set of columns in a table that refers to the pk in table.
+        * fk can have duplicate and null values.
+        * there can be multiple FKs.
+    
+* CLAUSES:-
+    * WHERE CLSUSE :- to define some conditions
+        * SYNTAX :- SELECT  col1, col2 FROM table_name WHERE conditions;
+            * Operators:-
+                * Arithmatic Operators: +,-,*,/,%
+                * Comparision Operatiors: =, !=, >, <, <=, >=
+                * Logical Operators: AND , OR , NOT, IN, BETWEEN, ALL, LIKE, ANY.
+                * Bitwise Operators: &, | .
