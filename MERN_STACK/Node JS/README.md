@@ -199,3 +199,13 @@ the help of server
                 * Comparision Operatiors: =, !=, >, <, <=, >=
                 * Logical Operators: AND , OR , NOT, IN, BETWEEN, ALL, LIKE, ANY.
                 * Bitwise Operators: &, | .
+
+* Frequently used where clause operator's are:-
+    * AND (to check that both the condition should be true)
+    * OR (to check that one condition should be true in both)
+    * BETWEEN (to select for a given range)
+    * IN (matches any value in the list)
+    * NOT (to negate the given condition)
+
+* LIMIT Clause:- sets an upper limit on a number of (tuple) rows to be returned.
+    *  SYNTAX : SELECT col1, col2 FROM table_name LIMIT number;
