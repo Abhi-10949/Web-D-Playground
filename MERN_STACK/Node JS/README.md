@@ -209,3 +209,33 @@ the help of server
 
 * LIMIT Clause:- sets an upper limit on a number of (tuple) rows to be returned.
     *  SYNTAX : SELECT col1, col2 FROM table_name LIMIT number;
+
+* Order by Clause: to sort in ascending(ASC) or descending(DESC) order.
+    * SYNTAX: SELECT col1, col2 FROM table_name ORDER BY col_name(s) ASC;
+
+* Aggregate Function: perform a calculation on a set of values, and return a single value.
+    * COUNT()
+    * MAX()
+    * MIN()
+    * SUM()
+    * AVG()
+
+    * Example: SELECT max(marks) FROM student;
+
+* GROUP BY CLAUSE:- Groups rows that have the same values into summary rows.
+* it collects data from multiple records and groups the result by one or more column.
+    * SYNTAX: SELECT col1, col2 FROM table_name GROUP BY col_name(s);
+    * NOTE: generally we use group by with some aggregation function.
+
+* Having Clause:- 
+    * similar to WHERE i.e. applies some condition on rows.
+    * but it is used when we want to apply any condition after grouping.
+    * SYNTAX: [SELECT col1,col2 FROM table_name GROUP BY col_name(s) HAVING condition].
+    * NOTE: WHERE is for table and HAVING is for group
+    * NOTE: grouping is necessary for having
+
+* Table Queries:
+    * Update(to update existing rows)
+    * SYNTAX: UPDATE table_name SET col1 = val1, col2 = val2 WHERE condition;
+    * NOTE : but at the first time sql will not allow to update and this will give error because sql by-default is set at 1, so for that we use :
+    SET SQL_SAFE_UPDATES = 0;
