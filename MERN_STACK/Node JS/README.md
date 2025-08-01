@@ -252,3 +252,11 @@ the help of server
 
     * Truncate (to delte table's data)
         * SYNTAX : TRUNCATE TABLE table_name;
+
+## NODE with SQL:-
+* Faker: Generate massive amounts of fake (but realistic) data for testing and development.
+    * npm i @faker-js/faker {to install this we use this command}.
+
+## MYSQL2 Package:- we will use this to connect NODE with MYSQL.
+* NOTE : To close connection we use [connection.end()].
+* this we will use because MYSQL may give the authentication issue while using.
