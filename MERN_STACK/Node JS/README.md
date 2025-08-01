@@ -239,3 +239,16 @@ the help of server
     * SYNTAX: UPDATE table_name SET col1 = val1, col2 = val2 WHERE condition;
     * NOTE : but at the first time sql will not allow to update and this will give error because sql by-default is set at 1, so for that we use :
     SET SQL_SAFE_UPDATES = 0;
+
+    * DELETE (to delete existing data)
+         * SYNTAX : DELETE FROM table_name WHERE codition;
+        
+    * ALTER (to change the schema)
+        * ADD column
+        * DROP column
+        * RENAMW column
+        * CHANGE column (rename)
+        * MODIFY column (modify datatype/constraints)
+
+    * Truncate (to delte table's data)
+        * SYNTAX : TRUNCATE TABLE table_name;
