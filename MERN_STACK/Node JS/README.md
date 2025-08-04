@@ -257,6 +257,34 @@ the help of server
 * Faker: Generate massive amounts of fake (but realistic) data for testing and development.
     * npm i @faker-js/faker {to install this we use this command}.
 
-## MYSQL2 Package:- we will use this to connect NODE with MYSQL.
-* NOTE : To close connection we use [connection.end()].
-* this we will use because MYSQL may give the authentication issue while using.
+
+## This are the three ways to run SQL commands:-
+
+* MYSQL2 Package:- we will use this to connect NODE with MYSQL.
+    * NOTE : To close connection we use [connection.end()].
+    * this we will use because MYSQL may give the authentication issue while    using.
+
+
+* Using SQL from CLI:-
+    * use this command:-   /usr/local/mysql/bin/mysql -u root -p
+
+
+* By using our MySQL Workbench.
+
+
+* By creating (.sql file) (e.g-->  schema.sql).
+    * then go to sql CLI and open it by using this command (/usr/local/mysql/bin/mysql -u root -p) and then in that type (source schema.sql) .
+
+
+
+## How to insert data in our table:-
+* // Using placeholders
+connection.query(
+  'SELECT * FROM `table` WHERE `name` = ? AND `age` > ?',
+  ['Page', 45],
+  function (err, results) {
+    console.log(results);
+  }
+);
+
+* //using faker
