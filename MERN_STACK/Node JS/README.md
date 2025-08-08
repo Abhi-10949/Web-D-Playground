@@ -288,3 +288,47 @@ connection.query(
 );
 
 * //using faker
+
+
+# MongoDB 
+## The Shell
+* mongosh //to start
+* use college //to create and use a new database called "college"
+* NOTE: test> this is the temporary database created by mongoDB
+* in monogDB any database became permanent only when data is inserted in database.
+
+## BSON Data it is Binary JSON 
+
+
+## Collections
+* Document: Mongo stores data in the form of documents(BSON docs)
+* Collection: MongoDB stores documents in Collections.
+* Inert int DB:
+    * insertOne
+        * show collections
+        * db.collection.insertOne({documents..},{documents..});
+        * db.collection.find();
+
+        * NOTE: if a collection does not exist, MongoDB creates the collection when you first store data for that collection
+
+        * to see all the documents we use: db.collection.find() 
+    
+    * insertMany(array of Documents)
+        * db.collection.insertMany([{documents}, {documents},..]) this will insert multiple documents in a collection.
+        *  db.college.find({age:19}) // this will finde according to the key: value pair. 
+            * and this find() returns cursor [] (i.e. reference to original).
+        * db.college.findOne({age:19}) // this will find only one document according to key: value pair
+            * and this findOne() reuturns actual documents {}.
+
+
+* Query Operators:
+    * Find students where marks is > 75
+        * db.student.find( {marks: {$gt : 75}} )
+    * Find students who live in Delhi or Mumbai
+        * db.student.find( {city: {$in: ["Delhi", "Mumbai"]}} )
+        * NOTE: values are case-sensetive
+    * Find students who scored > 75 or live in Bihar
+        * db.student.find( {$or: [{age: {$gte: 18}}, {city: "Bihar"}]})
+
+## to know all about MongoDB documentation visit this following site:
+* https://www.mongodb.com/docs/manual/
