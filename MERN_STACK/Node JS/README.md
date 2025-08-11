@@ -292,6 +292,7 @@ connection.query(
 
 # MongoDB 
 ## The Shell
+* brew services start mongodb/brew/mongodb-community (run this command)
 * mongosh //to start
 * use college //to create and use a new database called "college"
 * NOTE: test> this is the temporary database created by mongoDB
@@ -332,3 +333,18 @@ connection.query(
 
 ## to know all about MongoDB documentation visit this following site:
 * https://www.mongodb.com/docs/manual/
+
+## Nesting:-
+* db.college.insertOne( {name:"farah", performance: {marks: 88, grade: "A"}} )
+* db.college.find( {"performance.marks": 88} )
+
+
+
+## Mongoose:
+* A library that creates a connection between MongoDB & Node.js JavaScript Runtime Environment.
+* It is an ODM (Object Data Modeling) Library.
+
+* to install this :
+    * make a folder MONOG
+    * in that folder install--> npm init -y
+    * npm i mongoose ( in the MONOG folder )
