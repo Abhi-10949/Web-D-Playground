@@ -348,3 +348,16 @@ connection.query(
     * make a folder MONOG
     * in that folder install--> npm init -y
     * npm i mongoose ( in the MONOG folder )
+
+
+## Models:--
+* Model in mongoose is a class with which we construct documents.
+* e.g., const User = mongoose.model("User", userSchema);
+* NOTE: name of model and name of collection is generally is same
+
+## NOTE: Operation Buffering (as Mongoose use's)
+* Mongoose lets you start using your models immediately, without waiting for mongoose to establish a connection to MongoDB.
+
+## Find:
+* Model.find() //returns a Query objects(thenable)
+* Mongoose queries are not promises. But they have a .then()
