@@ -21,6 +21,10 @@
             <form method="get" action="/chats/<%= chat._id %>/edit">
                 <button>edit</button>
             </form>
+
+            <form method="post" action="/chats/<%= chat._id %>?_method=DELETE">
+                <button>Delete</button>
+            </form>
         </div>
         <p>Recived By: <i><%= chat.to %></i></p>
         <hr>
